@@ -1,6 +1,4 @@
-package com.example.common.resource
-
-import com.example.domain.common.resource.Resource
+package com.example.domain.common.resource
 
 sealed class Resource<out T>(
     val data: T? = null,

@@ -1,5 +1,6 @@
 package com.example.data.remote.dtos.detailDto
 
+import com.example.domain.model.detailmodel.GenresModel
 import com.google.gson.annotations.SerializedName
 
 data class GenresDto(
@@ -14,4 +15,8 @@ data class GenresDto(
 
     @SerializedName("url")
     val url: String,
+)
+
+fun GenresDto.toDomain() = GenresModel(
+    mal_id, type, name, url
 )

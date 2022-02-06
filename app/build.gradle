@@ -70,7 +70,7 @@ dependencies {
 
     // define any required OkHttp artifacts without version
     implementation('com.squareup.okhttp3:okhttp:5.0.0-alpha.4')
-    implementation("com.squareup.okhttp3:logging-interceptor")
+    implementation('com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.4')
 
     // To use only without reflection variants of viewBinding
     implementation 'com.github.kirich1409:viewbindingpropertydelegate:1.5.6'
