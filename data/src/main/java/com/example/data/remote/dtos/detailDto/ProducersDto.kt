@@ -1,5 +1,6 @@
 package com.example.data.remote.dtos.detailDto
 
+import com.example.domain.model.detailmodel.ProducersModel
 import com.google.gson.annotations.SerializedName
 
 data class ProducersDto (
@@ -14,4 +15,8 @@ data class ProducersDto (
 
     @SerializedName("url")
     val url: String,
+)
+
+fun ProducersDto.toDomain() = ProducersModel(
+    mal_id, type, name, url
 )

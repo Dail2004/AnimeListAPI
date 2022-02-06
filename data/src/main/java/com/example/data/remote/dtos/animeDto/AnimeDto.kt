@@ -3,6 +3,8 @@ package com.example.data.remote.dtos.animeDto
 import com.example.data.remote.dtos.detailDto.GenresDto
 import com.example.data.remote.dtos.detailDto.ProducersDto
 import com.example.data.remote.dtos.detailDto.StudiosDto
+import com.example.data.remote.dtos.detailDto.toDomain
+import com.example.domain.model.Anime
 import com.google.gson.annotations.SerializedName
 
 data class AnimeDto(
@@ -40,11 +42,28 @@ data class AnimeDto(
     val synopsis: String,
 
     @SerializedName("producers")
-    val producers: List<ProducersDto>,
+    val producers: ProducersDto,
 
     @SerializedName("studios")
-    val studios: List<StudiosDto>,
+    val studios: StudiosDto,
 
     @SerializedName("genres")
-    val genres: List<GenresDto>,
+    val genres: GenresDto,
+)
+
+fun AnimeDto.toDomain() = Anime(
+    mal_id,
+    image,
+    url,
+    title,
+    type,
+    title_synonyms,
+    status,
+    duration,
+    rating,
+    episodes,
+    synopsis,
+    producers.toDomain(),
+    studios.toDomain(),
+    genres.toDomain(),
 )
