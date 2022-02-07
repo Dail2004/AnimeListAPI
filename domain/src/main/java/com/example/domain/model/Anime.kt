@@ -1,12 +1,13 @@
 package com.example.domain.model
 
 import com.example.domain.model.detailmodel.GenresModel
+import com.example.domain.model.detailmodel.ImageModel
 import com.example.domain.model.detailmodel.ProducersModel
 import com.example.domain.model.detailmodel.StudiosModel
 
 class Anime(
     val mal_id: Int,
-    val image: String,
+    val image: ImageModel,
     val url: String,
     val title: String,
     val type: String,

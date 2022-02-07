@@ -1,6 +1,6 @@
 package com.example.data.remote
 
-import com.example.common.constance.Constance
+import com.example.data.common.constance.Constance
 import com.example.data.remote.apiservice.AnimeListApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

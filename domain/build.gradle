@@ -9,8 +9,6 @@ java {
 }
 
 dependencies {
-    implementation project(path: ':common')
-
     // Coroutine
     def coroutines_version = "1.4.2"
     api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-native-mt"

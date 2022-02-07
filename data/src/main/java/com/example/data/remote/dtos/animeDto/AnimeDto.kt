@@ -1,9 +1,6 @@
 package com.example.data.remote.dtos.animeDto
 
-import com.example.data.remote.dtos.detailDto.GenresDto
-import com.example.data.remote.dtos.detailDto.ProducersDto
-import com.example.data.remote.dtos.detailDto.StudiosDto
-import com.example.data.remote.dtos.detailDto.toDomain
+import com.example.data.remote.dtos.detailDto.*
 import com.example.domain.model.Anime
 import com.google.gson.annotations.SerializedName
 
@@ -12,7 +9,7 @@ data class AnimeDto(
     val mal_id: Int,
 
     @SerializedName("image")
-    val image: String,
+    val image: ImageDto,
 
     @SerializedName("url")
     val url: String,
@@ -53,7 +50,7 @@ data class AnimeDto(
 
 fun AnimeDto.toDomain() = Anime(
     mal_id,
-    image,
+    image.toDomain(),
     url,
     title,
     type,
