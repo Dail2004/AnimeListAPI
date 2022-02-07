@@ -1,6 +1,6 @@
 package com.example.data.repository
 
-import com.example.common.BaseRepository
+import com.example.data.common.base.BaseRepository
 import com.example.domain.common.resource.Resource
 import com.example.data.remote.apiservice.AnimeListApiService
 import com.example.data.remote.dtos.animeDto.toDomain
